@@ -28,7 +28,6 @@ git push
 ```
 
 ## git branch 사용 예시
-### 개인 디바이스에서
 ```shell
 git branch [branch_name]
 git checkout [branch_name]
@@ -38,10 +37,4 @@ git commit -m "[작업내용]"
 git push origin [branch_name]
 ```
 
-### 깃허브에서
-1. 해당 브랜치를 머지하려는 사람이 풀 리퀘스트 요청
-2. 리뷰 남기기
-   - 코드에 대한 리뷰
-   - 전체적인 리뷰
-3. 머지
-
+이후 깃허브에서 계속
