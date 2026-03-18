@@ -45,3 +45,8 @@ git push origin [branch_name]
    - 전체적인 리뷰
 3. 머지
 
+```shell
+git branch dev
+git branch [new branch] [from branch]
+git push origin [new branch]
+```
