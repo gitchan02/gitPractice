@@ -26,3 +26,15 @@ git add .
 git commit -m "init git project"
 git push
 ```
+
+## git branch 사용 예시
+```shell
+git branch [branch_name]
+git checkout [branch_name]
+# 작업
+git add [작업물]
+git commit -m "[작업내용]"
+git push origin [branch_name]
+```
+
+이후 깃허브에서 계속
