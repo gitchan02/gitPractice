@@ -65,3 +65,6 @@ git branch dev
 git branch [new branch] [from branch]
 git push origin [new branch]
 ```
+
+## 추가될 내용
+- 추가적인 name, email 설정 방법
