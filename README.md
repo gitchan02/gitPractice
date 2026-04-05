@@ -68,3 +68,75 @@ git push origin [new branch]
 
 ## 추가될 내용
 - 추가적인 name, email 설정 방법
+
+# 내가 예전에 아는 개발자분한테 배운거 추가
+
+```markdown
+
+## Branch & Fork
+### Branch
+> 현재 사용중인 환경을 복제하는 것
+
+``` shell
+# branch 생성
+git branch [branch name]
+# branch로 작업 공간 변경
+git checkout [branch name]
+# 
+git push --set-upstream origin [branch name]
+# branch 삭제
+git branch -d [branch name]
+```
+
+snapshot을 기준으로 diff의 결과만 저장하여 branch를 많이 해도 큰 용량을 사용하지 않음 (diff하니까 피신 생각나네 ㅇㅁㅇ)
+
+## Fork
+내 계정에 레포지토리 복사해왔음 (레포지토리 상단의 Fork를 통해 생성)
+
+원본 레포지토리와 Pull request를 통해 원본 레포지토리에 반영 가능
+
+clone - 작성 - commit - push까지 진행 후 웹 페이지에서 Pull requests 요청
+주인이 메세지, 소스코드 확인 후 저장
+
+Pull request에 의해서만 원본이 수정되기때문에 git pull은 사용이 안됨
+
+``` shell
+git remote add upstream [원본 레포지토리 url]
+git fetch upstream
+git branch -r
+git merge upstream/main
+git push origin main
+```
+
+### Merge 충돌이 나오는 경우
+(같은 영역을 여러 사용자가 수정한 경우)
+수동으로 확인 후 원하는대로 작성
+
+### 그래서?
+소규모는 편한대로 해도 상관 없음
+그런데 개발 인원이 몇십명인데 각자 브랜치를 따는게 좋을까? 아니면 필요한 주제로만 브랜치를 만들고 각자 자기가 작업해야하는 브랜치를 포크하는게 좋을까?를 생각해보면 후자가 좋겠죠?
+
+## revert, rebase
+> revert : 
+> rebase : 
+>> (이부분도 또 놓침)
+
+상의 없이 임의로 실행하면 어마어마한 커밋 충돌이 발생
+
+## github전략
+### git flow
+> 메인 개발 / 피처 토픽 / 릴리스 / 핫픽스
+> 네가지 브랜치로 개발
+>> main -> develop
+>> develop -> feature, topic, hotfix
+>> feature -> develop
+>> release, hotfix -> main
+>> geatyre, release, hotfix -> merge & delete
+
+### github flow
+> git flow가 복잡하다고 생각해서 나옴
+> CI/CD 자동화가 되어있고 수시로 배포할 때 적합
+
+
+
+```
